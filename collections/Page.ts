@@ -7,6 +7,7 @@ import { CallToAction } from '../blocks/CallToAction/Config';
 import { Type as CallToActionType } from '../blocks/CallToAction/Component';
 import { Content } from '../blocks/Content/Config';
 import { Type as ContentType } from '../blocks/Content/Component';
+import { Rooms } from '../blocks/Rooms/Config';
 
 
 export type Layout = CallToActionType | ContentType | ImageType
@@ -53,6 +54,7 @@ export const Page: CollectionConfig = {
         CallToAction,
         Content,
         Image,
+        Rooms,
       ],
     },
     {
