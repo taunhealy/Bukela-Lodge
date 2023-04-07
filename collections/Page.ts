@@ -8,9 +8,10 @@ import { Type as CallToActionType } from '../blocks/CallToAction/Component';
 import { Content } from '../blocks/Content/Config';
 import { Type as ContentType } from '../blocks/Content/Component';
 import { Rooms } from '../blocks/Rooms/Config';
+import { Type as RoomsType } from '../blocks/Rooms/Component';
 
 
-export type Layout = CallToActionType | ContentType | ImageType
+export type Layout = CallToActionType | ContentType | ImageType | RoomsType
 
 export type Type = {
   title: string
