@@ -7,23 +7,24 @@ import { MediaType } from '../../collections/Media';
 import { Rooms } from './Config';
 
 export type Type = {
-  blockType: 'rooms'
-  blockName?: string
+  blockType: 'rooms';
+  blockName?: string;
   selectRooms: any[];
-    
-  };
+};
 
-  export const Component: React.FC<Type> = ({ selectRooms }) => { 
-    return ( 
+export const Component: React.FC<Type> = ({ selectRooms }) => {
+  console.log(props);
+  
+  return (
     <div>
       {selectRooms.map((room) => (
         <div key={room._id}>
-        <h2>{room.title}</h2>
-        <img src={room.featuredImage.url} alt={room.featuredImage.alt} />
-        <p>{room.description}</p>
-        <p>Price: {room.price}</p>
+          <h2>{room.title}</h2>
+          <img src={room.featuredImage.url} alt={room.featuredImage.alt} />
+          <p>{room.description}</p>
+          <p>Price: {room.price}</p>
         </div>
-        ))}
+      ))}
     </div>
-    );
-  };
+  );
+};
