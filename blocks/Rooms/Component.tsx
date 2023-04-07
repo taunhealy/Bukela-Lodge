@@ -6,12 +6,15 @@ import sizes from './sizes.json';
 import { MediaType } from '../../collections/Media';
 import { Rooms } from './Config';
 
-export type RoomsBlockProps = {
-    selectRooms: Array<any>;
+export type Type = {
+  blockType: 'rooms'
+  blockName?: string
+  selectRooms: any[];
+    
   };
 
-  export const RoomsBlock: React.FC<RoomsBlockProps> = ({ selectRooms }) => {
-    return (
+  export const Component: React.FC<Type> = ({ selectRooms }) => { 
+    return ( 
     <div>
       {selectRooms.map((room) => (
         <div key={room._id}>
@@ -24,4 +27,3 @@ export type RoomsBlockProps = {
     </div>
     );
   };
-
